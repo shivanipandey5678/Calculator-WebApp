@@ -62,7 +62,8 @@
 //     secondnumber="";
     
 // })
-let string = "";
+try {
+    let string = "";
 let buttons = document.querySelectorAll('.button');
 Array.from(buttons).forEach((button)=>{
   button.addEventListener('click', (e)=>{
@@ -81,3 +82,6 @@ Array.from(buttons).forEach((button)=>{
       }
   })
 })
+} catch (error) {
+    document.querySelector('input').value = error;
+}
